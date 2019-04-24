@@ -1,8 +1,5 @@
 # twintScrapper
 
-# Projet Walletexplorer : 
-
-
 * Projet réalisé dans le cadre de l'UE POM pour l'extraction des informations relatives aux bitcoins sur les réseaux sociaux 
 
 
