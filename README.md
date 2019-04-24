@@ -40,9 +40,9 @@
 ## Optionnal Arguments parse
 
 optional arguments:
-  -h, --help  show this help message and exit
-  -n [N]      number of threads. 10 by default
-  -s [S]      search value. 'search bictoin address' by default
+  * -h, --help  show this help message and exit
+  * -n [N]      number of threads. 10 by default
+  * -s [S]      search value. 'search bictoin address' by default
 
 example : 
 
