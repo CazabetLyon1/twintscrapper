@@ -21,26 +21,22 @@ def outputAdresses(tweetsOutput):
 
 
 def main():
-
-    # Instantiate the parser
+   
     parser = argparse.ArgumentParser(description='search bitcoin adress in tweeter')
 
-    # Optional positional argument
     parser.add_argument('-n', type=int, nargs='?',
                     help='number of threads. 10 by default')
-
     parser.add_argument('-s', nargs='?',
                     help="search value. 'search bictoin address' by default")
 
-
-
     args = parser.parse_args()
     
-
     c = twint.Config()
 
-    # equivalent to `-s` bitcoin
+    # equivalent to `-s` 
     c.Search = "my bitcoin address"
+
+    # equivalent to '-n'
     c.Limit = 10
 
     if args.n : 
@@ -51,9 +47,6 @@ def main():
 
     c.Store_object = True
     c.Custom['tweet'] = ['tweet']
-
-
-
     twint.run.Search(c)
 
     #Pour juste afficher les adresses scrap
