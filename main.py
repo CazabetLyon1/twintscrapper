@@ -20,7 +20,7 @@ def outputAdresses(tweetsOutput):
             
 
 
-def main()
+def main():
 
     # Instantiate the parser
     parser = argparse.ArgumentParser(description='search bitcoin adress in tweeter')
