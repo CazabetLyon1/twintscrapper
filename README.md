@@ -46,7 +46,7 @@ optional arguments:
 
 exemple : 
 
-* <code> python3 main.py -n 100 -s 'bitcoin adresses" </code>
+* <code> python3 main.py -n 100 -s 'bitcoin adresses' </code>
 
 
 
