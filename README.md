@@ -44,7 +44,7 @@ optional arguments:
   * -n [N]      number of threads. 10 by default
   * -s [S]      search value. 'search bictoin address' by default
 
-example : 
+exemple : 
 
 * <code> python3 main.py -n 100 -s 'bitcoin adresses" </code>
 
