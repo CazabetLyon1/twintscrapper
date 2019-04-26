@@ -13,16 +13,22 @@ def check(text):
         return None
 
 def outputAdresses(tweetsOutput):
-    dict = {}
+    array = []
     for i in tweetsOutput :
         if check(i.tweet) != None :
             address = check(i.tweet)
-            #print('\t '+address.group() + ' ' + i.username  +'\r\n')
-            dict['username'] = i.username
-            dict['address'] = address.group()
-            print(dict)
-    #with open('data.json', 'w') as outfile:
-       # json.dump(dict, outfile)
+            object =  {"username" : i.username , "address" : address.group()}
+            array.append(object)
+    print(array)
+    #dump = json.dumps(array)
+    '''with open('data.json', 'w') as outfile:
+        for obj in array:
+            dump = json.dumps(obj)
+            json.dump(dump, outfile)'''
+    dump = json.dumps(array)
+    with open('data.json', 'w') as outfile:
+        json.dump(dump, outfile)
+    print('keys 🔑 has been added to data.json file 💾')
         
             
 
