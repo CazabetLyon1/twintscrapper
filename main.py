@@ -20,14 +20,16 @@ def outputAdresses(tweetsOutput):
             #print('\t '+address.group() + ' ' + i.username  +'\r\n')
             dict['username'] = i.username
             dict['address'] = address.group()
-    with open('data.json', 'w') as outfile:
-        json.dump(dict, outfile)
+            print(dict)
+    #with open('data.json', 'w') as outfile:
+       # json.dump(dict, outfile)
+        
             
 
 
 def main():
    
-    parser = argparse.ArgumentParser(description='search bitcoin adress in tweeter')
+    parser = argparse.ArgumentParser(description='search bitcoin address in tweeter')
 
     parser.add_argument('-n', type=int, nargs='?',
                     help='number of threads. 10 by default')
