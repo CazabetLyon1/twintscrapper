@@ -13,10 +13,15 @@ def check(text):
         return None
 
 def outputAdresses(tweetsOutput):
+    dict = {}
     for i in tweetsOutput :
         if check(i.tweet) != None :
             address = check(i.tweet)
-            print('\t '+address.group()+'\r\n')
+            #print('\t '+address.group() + ' ' + i.username  +'\r\n')
+            dict['username'] = i.username
+            dict['address'] = address.group()
+    with open('data.json', 'w') as outfile:
+        json.dump(dict, outfile)
             
 
 
@@ -56,6 +61,4 @@ def main():
     tweets = twint.output.tweets_object
     outputAdresses(tweets) 
 
-
 main()
-
