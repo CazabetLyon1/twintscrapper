@@ -17,17 +17,18 @@ def outputAdresses(tweetsOutput):
     for i in tweetsOutput :
         if check(i.tweet) != None :
             address = check(i.tweet)
-            object =  {"username" : i.username , "address" : address.group()}
+            object =  {'username' : i.username , 'address' : address.group()}
             array.append(object)
-    print(array)
+   # print(array)
     #dump = json.dumps(array)
     '''with open('data.json', 'w') as outfile:
         for obj in array:
             dump = json.dumps(obj)
             json.dump(dump, outfile)'''
-    dump = json.dumps(array)
+    #dump = json.dumps(array)
+   # print(dump)
     with open('data.json', 'w') as outfile:
-        json.dump(dump, outfile)
+        json.dump(array, outfile)
     print('keys 🔑 has been added to data.json file 💾')
         
             
@@ -35,7 +36,7 @@ def outputAdresses(tweetsOutput):
 
 def main():
    
-    parser = argparse.ArgumentParser(description='search bitcoin address in tweeter')
+    parser = argparse.ArgumentParser(description='search bitcoin address in twitter')
 
     parser.add_argument('-n', type=int, nargs='?',
                     help='number of threads. 10 by default')
