@@ -39,7 +39,7 @@
 optional arguments:
   * -h, --help  show this help message and exit
   * -n [N]      number of tweets. 10 by default
-  * -s [S]      search value. 'search bictoin address' by default
+  * -s [S]      search value. 'bictoin address' by default
 
 exemple : 
 
